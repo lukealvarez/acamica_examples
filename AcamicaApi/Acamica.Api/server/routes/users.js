@@ -1,9 +1,12 @@
 import { Router } from 'express';
+import Persona from '../Model/Persona'
+
 var router = Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/:nombre/:apellido', function(req, res, next) {
+  const user = new Persona(req.params.nombre, req.params.apellido );
+  res.send(`The user is: ${user.nombreCompleto()}`);
 });
 
 export default router;
