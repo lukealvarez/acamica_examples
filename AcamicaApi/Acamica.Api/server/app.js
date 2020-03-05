@@ -8,7 +8,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import indexRouter from './routes/index';
-import usersRouter from './routes/users';
+import usersRouter from './routes/usersRoute';
 
 var app = express();
 
