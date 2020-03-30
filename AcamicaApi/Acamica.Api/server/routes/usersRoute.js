@@ -15,6 +15,11 @@ router.get('/:id', function(req, res, next) {
     res.send('no hay usuarios con ese id');
 });
 
+router.get('/time', function(req, res, next) {
+  setTimeout(() => {res.json('hey');}, 3000);
+  
+});
+
 router.post('/create/:nombre/:apellido', function(req, res, next) {
   const user = new User(req.params.nombre, req.params.apellido );
 

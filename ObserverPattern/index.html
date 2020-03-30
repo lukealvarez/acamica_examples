@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <span><strong>Ingrese valor:</strong></span>
+        <input type="text" id="input" />
+        <br/>
+        <br/>
+        <div>
+            <span><strong>Label 1:</strong></span>
+            <p id="p1"></p>
+        </div>
+        <br/>
+        <div>
+            <span><strong>Label 2:</strong></span>
+            <p id="p2"></p>
+        </div>
+        
+
+    </body>
+    <script src="observable.js"></script>
+    <script src="observer.js"></script> 
+    <script>
+        const input = document.querySelector('#input');
+        const p1 = document.querySelector('#p1');
+        const p2 = document.querySelector('#p2');
+
+        // Instanciamos sujeto
+        const subject = new Observable();
+
+        // Creamos observers a utilizar
+        const observer1 = new Observer(1, p1);
+        const observer2 = new Observer(2, p2);
+
+        // Suscribimos acciones
+        subject.subscribe(observer1);
+        subject.subscribe(observer2);
+
+        // Usamos el evento de KeyUp para notificar a todos cada vez
+        // que se tipee un nuevo valor
+        input.addEventListener('keyup', e => {
+            subject.notifyAll(e.target.value);
+        });
+    </script>
+</html>
