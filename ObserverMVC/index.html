@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <span><strong>Ingresar To Do:</strong></span>
+        <input type="text" id="input" />
+        <button id="addButton">agregar</button>
+        <br/>
+        <br/>
+        <h3>Lista:</h3>
+        <div id="todos">
+            No hay tareas para esta semana!
+            <ul id="todoList"></ul>
+        </div>
+    </body>
+
+    <script src="./core/observable.js"></script>
+    <script src="./core/observer.js"></script>
+    <script src="./model/todo.js"></script>
+    <script src="./controller/todoController.js"></script>
+    <script src="./view/todoView.js"></script>
+    <script>
+        const todoView = new TodoView();
+
+        todoView.initialize();
+        
+    </script>
+
+</html>

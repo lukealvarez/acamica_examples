@@ -1,0 +1,42 @@
+Control de Gastos
+
+Equipo 1: Miss, Nacho, Ale 
+Equipo 2: Alex, Lu, Cata
+
+Epic -> N Features -> N tasks
+
+- Epic: Flujo de registro e inicio de sesion
+    - Feature: Registrarse
+        El usuario se registra con email, password, nombre, apellido. 
+        El email va a ser usado para el Login.
+    - Feature: Login
+        Si el usuario olvido la constraseña se la devolvemos con pregunta secreta.
+        Recordar usuario
+    - Feature: Logout
+        Cuando el usuario cierra sesion, te redirige a la pagina de inicio.
+- ABM/CRUD de Gastos
+    - Ingresar Gasto
+        Ingresar Titulo, monto, categoria, fecha de gasto.
+        Id se auto genera
+        fecha de creacion de registro se auto genera
+        Moneda de gasto siempre es Pesos
+        Si la fecha de gasto es null, auto generarlo con la fecha de creacion
+    - Ver todos mis gastos
+    - Eliminar Gasto
+    - Cancelar gasto
+    - Ver gasto
+    - Modificar Gasto
+        Se puede modificar dentro de las 24hs de creado.
+- Reportes
+    - Gastos por categoria
+    - Gasto x fecha
+    - Comparar Gastos por mes
+- Control de gasto
+    - Poner Limite de gasto general
+    - Programar gasto
+- Tools de gastos  
+    - Descargar gastos  
+        El usuario puede descargar sus gastos en archivo excel.
+- CRUD Categorias
+    - Ver categorias
+    - Agregar categoria
