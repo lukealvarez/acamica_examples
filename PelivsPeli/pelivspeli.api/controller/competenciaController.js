@@ -2,50 +2,36 @@ var express = require('express');
 var router = express.Router();
 
 const competenciaService = require('../service/competenciaService');
+const peliculaService = require('../service/peliculaService');
 
 module.exports.init = (dbConnection) => {
   
-  const service = competenciaService.init(dbConnection);
+  const compService = competenciaService.init(dbConnection);
+  const peliService = peliculaService.init(dbConnection);
 
-  router.get('/', (req,res) => service.getAll()
+  router.get('/', (req,res) => compService.getAll()
     .then(data => res.status(200).json(data))
     .catch(err => res.status(400).send(err)));
 
+  router.get('/:id/peliculas', (req, res, next) => {
+    const compPromise = compService.getCompetenciaById(req.params.id);
+    const peliPromise = peliService.getAllPelis();
+
+    Promise.all([compPromise, peliPromise])
+      .then((results) => {
+        console.log(results);
+        res.status(200).json({competencia: results[0].nombre, peliculas: results[1]})
+      })
+      .catch(err => res.status(404).send(err));
+  });
+
+  router.post('/:id/voto', (req,res) => compService.votarPelicula(req.params.id, req.body.idPelicula)
+  .then(data => res.status(200).json(data))
+  .catch(err => res.status(400).send(err)));
+
+  router.get('/:id/resultados', (req,res) => compService.getResultados(req.params.id)
+  .then(data => res.status(200).json(data))
+  .catch(err => res.status(400).send(err)));
+
   return router;
 };
-
-// router.get('/:id/peliculas', function(req, res, next) {
-
-//   let competencia = new Competencia();
-//   let peliculas = new Peliculas();
-
-//   var promiseCompetencia = compentecia.getCompetencia();
-//   var promisePeliculas = peliculas.getPeliculas();
-
-//   res.json({}));
-
-  // Promise.all(promiseCompetencia,promisePeliculas).then(values => {
-  //   res.json(new opciones(nombreCompetencia, peliculas));
-  // });
-// });
-
-
-//   conn.query('SELECT nombre FROM competencias WHERE id = ?', [req.params.id] , (err,results) => {
-//     if(err) throw err;
-//     nombreCompetencia = results[0].nombre;
-    
-//   }).then(() => {
-//     conn.query('SELECT id, titulo, poster FROM pelicula', (err,results) => {
-//       if(err) throw err;
-//       console.log(results[0].poster);
-//       peliculas = results;
-  
-//       console.log(peliculas);
-//       res.json(new opciones(nombreCompetencia, peliculas));
-  
-//     }).then(() => {
-//       conn.end((err) => {
-//       });
-//     });
-//   });
-// })
