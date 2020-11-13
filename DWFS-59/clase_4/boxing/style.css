@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Una forma de importar fonts*/
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+
+/*Asi se importan fonts locales*/
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('webfont.eot'); /* IE9 Compat Modes */
+    src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+ 
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1440px;
+    font-family: 'holaMundo', 'Open Sans', sans-serif;
+}
+
+.container > div{
+    border: solid 2px red;
+    height: 10px;
+
+}
+
+.container ~ div{
+    border: solid 2px red;
+    height: 10px;
+
+}
+
+span{
+    border: solid 2px red;
+    width: 30%;
+}
+
+footer {
+    border: solid 2px green;
+    height: 40%;
+}
+
+nav {
+    border: solid 2px blue;
+    height: 40%;
+}

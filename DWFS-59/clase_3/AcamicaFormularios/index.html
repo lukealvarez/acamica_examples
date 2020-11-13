@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formulario1" action="http://localhost:3000/users/crear" method="POST" enctype="multipart/form-data">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" placeholder="__-______-__" tabindex="3">
+        <br>
+        <br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" tabindex="1" required>
+        <br>
+        <br>
+        <label for="anioNacimiento">Año nacimiento:</label>
+        <select name="anioNacimiento" tabindex="-1">
+            <option>2000</option>
+            <option>2001</option>
+            <option>2002</option>
+        </select>
+        <input name="usuarioId" type="hidden" value="123456">
+        
+    </form>
+    <br>
+    <input type="reset" value="eliminar campos" form="formulario1">
+    <input type="submit" value="Editar usuario" form="formulario1">
+</body>
+</html>
