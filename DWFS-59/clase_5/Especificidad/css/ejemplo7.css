@@ -1,0 +1,14 @@
+/* Ejemplo 7 */
+/* 0-2-0 */
+
+div p:nth-of-type(2n) {
+    color: red;
+}
+
+p.color {
+    color: blue;
+}
+
+p.color.verde {
+    color: green;
+}

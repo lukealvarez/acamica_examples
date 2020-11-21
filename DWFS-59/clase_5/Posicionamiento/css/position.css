@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 2000px;
+}
+
+div {
+    height: 100px;
+    width: 100px;
+    background-color: coral;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contenedor {
+    width: 600px;
+    height: 600px;
+    background-color: black;
+}
+
+.fixed {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    left: 600px;
+    bottom: 0;
+    z-index: 100;
+    background-color: seagreen;
+}
+
+.relative {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 100px;
+}
+
+.absolute {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: crimson;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 300px;
+    background-color: darkcyan;
+}

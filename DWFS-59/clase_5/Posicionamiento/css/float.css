@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1440px;
+}
+
+.caja {
+    border: black solid 2px;
+    width: 604px;
+    height: 604px;
+    box-sizing: border-box;
+}
+
+.negro {
+    height: 300px;
+    width: 300px;
+    border: black solid 2px;
+    float: left;
+}
+
+.azul {
+    height: 300px;
+    width: 300px;
+    border:blue solid 2px;
+    float: left;
+}
+
+.verde {
+    height: 300px;
+    width: 300px;
+    border: green solid 2px;
+    clear: left;
+    float: left;
+}
+
+.rojo {
+    height: 300px;
+    width: 300px;
+    border: red solid 2px;
+    float: left;
+}
