@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Esto sirve para centrar a cualquier elemento dentro de su relativo */
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: sandybrown;
+    /* Pone el elemento como absoluto, lo cual inicia en el 0,0 de su relativo (en este caso el body) */
+    position: absolute;
+    /* Con top y left lo posicionamos en el medio */
+    top:50%;
+    left:50%;
+    /* Como lo que queda centrado es el 0,0 del elemento, vamos a convertirlo para que quede centrado el elemento */
+    transform: translate(-50%, -50%);
+}
