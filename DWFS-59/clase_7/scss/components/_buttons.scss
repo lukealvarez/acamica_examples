@@ -1,0 +1,28 @@
+.tab-button {
+    @include button-mixin(5px);
+}
+
+.ok-button {
+    @include button-mixin(8px);
+}
+
+.active-button {
+    @extend %relative;
+    color: $gray;
+}
+
+.cancel-button {
+    @extend %relative;
+    color: $steel;
+}
+
+.button {
+    & > span { color: $steel; }
+    & + span { color: $steel; }
+    & ~ span { color: $steel; }
+  }
+
+.btn {
+    &-primary { color: $steel; }
+    &-secondary { color: $steel; }
+}

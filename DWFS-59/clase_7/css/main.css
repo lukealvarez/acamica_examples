@@ -1,0 +1,44 @@
+/* BASE - Default fall-backs and external files.
+========================================================================== */
+/* HELPERS - Base Variable file along with starting point Mixins and Placeholders.
+========================================================================== */
+.active-button, .cancel-button {
+  position: relative;
+  top: 0;
+  left: 0; }
+
+/* LAYOUT - Structure and layout files.
+========================================================================== */
+.span-columns {
+  width: 50%; }
+
+/* COMPONENTS - Re-usable site elements.
+========================================================================== */
+.tab-button {
+  margin-left: 5px;
+  border-radius: 5px; }
+
+.ok-button {
+  margin-left: 8px;
+  border-radius: 8px; }
+
+.active-button {
+  color: #828489; }
+
+.cancel-button {
+  color: #b6c2d9; }
+
+.button > span {
+  color: #b6c2d9; }
+
+.button + span {
+  color: #b6c2d9; }
+
+.button ~ span {
+  color: #b6c2d9; }
+
+.btn-primary {
+  color: #b6c2d9; }
+
+.btn-secondary {
+  color: #b6c2d9; }
