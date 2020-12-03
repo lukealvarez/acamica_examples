@@ -1,0 +1,5 @@
+// Sass functions
+
+@function calculate-width ($col-span) {
+    @return 100% / $col-span 
+}
