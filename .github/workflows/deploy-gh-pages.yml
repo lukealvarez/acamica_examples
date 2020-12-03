@@ -17,3 +17,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
+          FOLDER: DWFS-59/clase_4/estilos_varios
