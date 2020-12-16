@@ -1,0 +1,45 @@
+.contenedor {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 1fr 4fr;
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas: "header 		header 		header"
+						 "aside 	    main 	    main"
+						 "aside      	main 	    main"
+						 "footer 		footer 		footer";
+}
+
+header {
+	background: #ff8000;
+	grid-column-start: header;
+	grid-column-end: header;
+}
+
+aside {
+	background: #393e46;
+
+	/* Forma #1 */
+	/* grid-column-start: sidebar-1;
+	grid-column-end: sidebar-1;
+	grid-row-start: sidebar-1;
+	grid-row-end: sidebar-1; */
+
+	/* Forma #2 */
+	/* grid-column: sidebar-1;
+	grid-row: sidebar-1; */
+
+	/* Forma 3 */
+	grid-area:aside;
+}
+
+main {
+	background: #fff;
+	color: #000;
+	grid-area:main;
+}
+
+footer {
+	background: #222831;
+    grid-area: footer;
+    color: lightblue;
+}

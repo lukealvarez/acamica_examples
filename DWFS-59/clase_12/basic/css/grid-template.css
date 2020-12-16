@@ -1,0 +1,31 @@
+.contenedor {
+    display: grid;
+    
+    /* Forma 1 */
+    /* grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px; */
+
+    /* Forma 2 */
+    /* grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(5, 100px); */
+
+    /* Forma 3 */
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 100px); */
+
+    /* Forma 4 */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 50px;
+
+    gap: 10px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box:nth-child(2n) {
+    background: grey;        
+}
